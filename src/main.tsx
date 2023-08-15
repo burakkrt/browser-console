@@ -5,6 +5,7 @@ import { ContainerHalf } from './components/main.styled.tsx'
 import ContextProvider from './context'
 import MainLayout from './pages/MainLayout.tsx'
 import ToogleMode from './components/ToogleMode.tsx'
+import LeftContainer from './pages/LeftContainer.tsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -12,7 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ContextProvider>
       <ToogleMode />
       <MainLayout>
-        <ContainerHalf>Bu alan şuan yapım aşamasındadıır.</ContainerHalf>
+        <ContainerHalf>
+          <LeftContainer />
+        </ContainerHalf>
         <ContainerHalf>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse fugiat illum in iusto, quaerat quisquam
           saepe tempora ut. Amet culpa minus odio perferendis quas quo repudiandae tempore velit veniam.Lorem ipsum
