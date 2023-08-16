@@ -12,5 +12,14 @@ export const Toggle = styled.div<{ theme?: string }>`
     flex-direction: row;
     align-items: center;
     gap: 8px;
+    font-size: 2.3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    input {
+      outline: 2px solid white;
+      width: 24px;
+      height: 24px;
+    }
   }
 `

@@ -1,11 +1,15 @@
 import { createContext, useState } from 'react'
-import { Data, Theme } from './main.types.tsx'
+import { ContextProps, Data, Theme } from './main.types.tsx'
 
 export const Context = createContext<Data | null>(null)
 
-export default function ContextProvider({ children }: any) {
+export default function ContextProvider({ children }: ContextProps) {
 
-  const [theme, setTheme] = useState<Theme>('light')
+  const initalTheme = localStorage.getItem('theme') || 'light'
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const [theme, setTheme] = useState<Theme>(initalTheme)
 
   const data: Data = {
     theme,

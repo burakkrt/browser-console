@@ -1,6 +1,6 @@
 import { ReactNode, useContext, useEffect } from 'react'
-import { Container } from '../components/main.styled.tsx'
-import { Context } from '../context'
+import { Container } from './main.styled.tsx'
+import { Context } from '../../context'
 
 interface Props {
   children: ReactNode
@@ -8,21 +8,20 @@ interface Props {
 
 export default function MainLayout({ children }: Props) {
 
-  // @ts-ignore
-  const { theme } = useContext(Context)
+  const state = useContext(Context)
 
   useEffect(() => {
     const rootElement = document.querySelector('#root') as HTMLElement
 
-    if (theme === 'dark') {
+    if (state?.theme === 'dark') {
       rootElement.style.backgroundColor = '#2C3333'
-    } else if (theme === 'light') {
+    } else if (state?.theme === 'light') {
       rootElement.style.backgroundColor = '#F6F1F1'
     }
-  }, [theme])
+  }, [state?.theme])
 
   return (
-    <Container theme={theme}>
+    <Container theme={state?.theme}>
       {children}
     </Container>
   )

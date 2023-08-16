@@ -38,8 +38,3 @@ export const ContainerHalf = styled.div`
   scrollbar-width: thin;
   scrollbar-color: #DAC0A3 #F8F0E5;
 `
-
-export const VerticalLine = styled.hr`
-  width: 3px;
-  background-color: rgba(0, 0, 0, 0.3);
-`
