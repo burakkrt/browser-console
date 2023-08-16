@@ -14,9 +14,12 @@ export default function CodeBlock({ codeString, language, theme, img, row }: Pro
 
   if (!img) {
 
+
     return (
       <CodeBlockLayout theme={theme}>
         {row && <RowNumber>{row}</RowNumber>}
+        {/*eslint-disable-next-line @typescript-eslint/ban-ts-comment*/}
+        {/*@ts-ignore*/}
         <SyntaxHighlighter language={language || 'javascript'} children={codeString} style={theme === 'light' ? a11yDark : a11yLight} showLineNumbers={true} wrapLines={true} />
       </CodeBlockLayout>
     )

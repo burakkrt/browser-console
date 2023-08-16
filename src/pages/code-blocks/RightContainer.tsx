@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { CodeBlockLayout } from '../../components/syntax-highlighter/index.styled.tsx'
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import CodeBlock from '../../components/syntax-highlighter'
 import { Context } from '../../context'
 
@@ -16,7 +16,7 @@ export const ConsoleGroup = styled.ul`
 export default function RightContainer() {
 
   const state = useContext(Context)
-  
+
   return (
     <React.Fragment>
       <CodeBlockLayout id='dasd'>
